@@ -1,25 +1,9 @@
-## About
+# Drupal
 
-This repository is forked from ONLYOFFICE/Docker-CommunityServer, we have the following modifications are provided
+在官方镜像和Bitnami镜像之间做了对比，最终选择 Bitnami镜像。原因如下：
 
-* replace README.md
-* add README-zh.md, CHANGELOG.md, Note.md, License.md, docker-compose-production.yml, .github folder
-
-## FAQ
-
-#### Drupal 容器的用户是什么？
-
-www-data
-
-#### mount 挂载 modules, profiles 之后没有权限怎么办？
-
-```
-chown -R www-data:www-data volumes/drupal
-```
-
-#### Drupal 容器启动后是否已经连接数据库？
-
-没有，需要在安装向导完成数据库配置
+1. 完成了初始化，无数据库设置
+2. 环境变量更多选择
 
 #### Drupal 安装向导数据库总是连接不成功？
 
