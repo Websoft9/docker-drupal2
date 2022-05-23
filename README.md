@@ -15,7 +15,7 @@ The following are the minimal [recommended requirements](https://www.drupal.org/
 * **OS**: Red Hat, CentOS, Debian, Ubuntu or other's Linux OS
 * **Public Cloud**: More than 20+ major Cloud such as AWS, Azure, Google Cloud, Alibaba Cloud, HUAWEIClOUD, Tencent Cloud
 * **Private Cloud**: KVM, VMware, VirtualBox, OpenStack
-* **ARCH**:  Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686
+* **ARCH**:  Linux x86-64, ARM 32/64, Windows x86-64, x86/i686
 * **RAM**: 1 GB or more
 * **CPU**: 1 cores or higher
 * **HDD**: at least 20 GB of free space
@@ -53,7 +53,7 @@ If you have not install Docker and Docker-Compose, refer to the following comman
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
-curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/v2.1.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
@@ -66,7 +66,7 @@ We assume that you are already familiar with Docker, and you can modify [docker-
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-drupal
 cd docker-drupal
-docker-compose -f docker-compose.yml  --env-file  .env up -d
+docker-compose  up -d
 ```
 
 ### FAQ
@@ -79,10 +79,9 @@ You should modify ports at [docker-compose file](docker-compose-production.yml) 
 
 #### Why database connection failed?  
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/drupal/drupal-install-db-docker-websoft9.png)  
-
 ### Usage instructions
 
-You can point your browser to: *`http://Instance's Internet IP:9001`*  
+You can point your browser to: *`http://Instance's Internet IP:port`*  
 
 The following is the information that may be needed during use
 
